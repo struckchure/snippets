@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./web:/app
+    restart: unless-stopped
+    command: yarn dev -- --host
+    ports:
+      - 3000:3000
