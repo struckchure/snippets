@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: production
     volumes:
       - ./web:/app
     restart: unless-stopped
