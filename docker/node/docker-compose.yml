@@ -9,6 +9,6 @@ services:
     volumes:
       - ./web:/app
     restart: unless-stopped
-    command: yarn dev -- --host
+    command: pm2 serve dist -p 3000 ---spa
     ports:
       - 3000:3000
